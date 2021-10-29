@@ -24,7 +24,7 @@ function compareNum(){
   
     let result="";
         
-            if( userNum!==isNaN || userNum<=0 || userNum>100||userNum===" "){
+            if(   userNum<=0 || userNum>100||userNum===" "){//!--userNum!==isNaN--!
             alert('Please Enter a number 0-100!');
             // input.value="";
             }
@@ -32,30 +32,34 @@ function compareNum(){
                 tries-=1;
                 triesTaken+=1;
                 result=`SORRY!! Your guess is higher than the number`;
+                document.querySelector('p').innerHTML=`${tries} left`;
                 input.value="";
             }else if(guessNUm > userNum){
                 tries-=1;
                 triesTaken+=1;
                 result=`SORRY!! Your guess is less than the number`;
-               input.innerHTML='';
+                document.querySelector('p').innerHTML=`${tries} left`;
                input.value="";
             }else {
                 tries-=1;
                 triesTaken+=1;
                 result=`CONGRATS!!! You found the number in ${triesTaken}. times`;
+                document.querySelector('p').innerHTML=`${tries} left`;
                 input.value="";
                 play=gameOver;
                 src="https://www.icegif.com/wp-content/uploads/icegif-504.gif";
                 img=document.createElement('img');
                 img.src=src;
                 document.body.appendChild(img);
+              
                 
                 
             }
          
             if(tries === 0 && guessNUm!=userNum){
-                alert("So Sorry!!! your game is over");
-                input.value="";
+              result="So Sorry!!! your game is over";
+              document.querySelector('p').innerHTML=`${tries} left`;
+              input.value="";
                 play=gameOver;
 
             }

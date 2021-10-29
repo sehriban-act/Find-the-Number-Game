@@ -1,27 +1,33 @@
 body{
     text-align: center;
-    margin-top:10%;
-   
-
-
+    width:100%;
+    height:100%;
+position:absolute;
+    
 
 }
 div{
-    background-image: url(./img/lotery.jpg);
+    background-image: url(./img/lottery-background-1024x628.jpg);
+
+    /* margin-left: 50%; */
+    /* background-image: url(./img/lotery.jpg); */
     background-repeat: no-repeat;
 background-position:center;
+background-size:cover;
 /* background-position-y: 250%; */
-height:40vh;
-/* position: absolute; */
+
+/* width:60vh; */
 }
+
 h1{
-    color:#f68e91;
+padding-top:1em;
+    color:#d32b31;
 }
 input{
     color:#29abe1;
     text-align: center;
     font-weight: 900;
-    width:2%;
+    width:10%;
     height:4vh;
     margin-bottom: 2em;
     border-radius: 1em;
@@ -34,7 +40,7 @@ input::after{
     background-color:rgb(236, 222, 22) ;
 }
 button{
-    width:3%;
+    width:13%;
     height:4vh;
     text-align: center;
     background-color: #29abe1;
@@ -43,21 +49,114 @@ button{
 }
 button:hover{
     background-color: #295ae1;
-    width:4%;
+    width:15%;
     height:5vh;
 }
 h2{
-    color:rgb(36, 85, 20);
+    color:rgb(203, 206, 19);
     text-decoration:underline ;
     font-variant-caps:all-small-caps;
-    position: relative;
+    /* position: relative; */
+    padding:1em;
     
 }
 h3{
-    color:crimson;
+    color:rgb(192, 206, 226);
     font-size: x-large;
+    margin:1em;
 }
 img{
   
 }
+p{
+    color:rgb(36, 85, 20)
+    border-spacing:2px red;
+    font-size: x-large;
+    font-weight: 800;
+}
 
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3){
+
+    div{
+        background-image: url(./img/lottery-background-1024x628.jpg);
+    
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size:cover;
+   
+    }
+    
+    
+    
+
+    h1{
+    margin:0.5em;
+        color:#db151b;
+    }
+    input{
+        color:#29abe1;
+        text-align: center;
+        font-weight: 900;
+        width:10%;
+        height:4vh;
+        margin-bottom: 0.5em;
+        border-radius: 1em;
+         border:2px solid #f68e91
+    }
+    input:hover{
+        border:3px solid #e4444a
+    }
+    input::after{
+        background-color:rgb(236, 222, 22) ;
+    }
+    button{
+        width:13%;
+        height:4vh;
+        text-align: center;
+        background-color: #29abe1;
+        color:white;
+        font-weight:700;
+        font-size:10px;
+    }
+    button:hover{
+        background-color: #295ae1;
+        width:15%;
+        height:5vh;
+    }
+    h2{
+        color:rgb(36, 85, 20);
+        text-decoration:underline ;
+        font-variant-caps:all-small-caps;
+        position: relative;
+        font-size: 1rem;
+        
+    }
+    h3{
+        color:crimson;
+        font-size: 1rem;
+        margin:4em;
+    }
+    img{
+   text-align: center;
+      z-index: 10;
+      position: relative;
+
+    }
+    p{
+        color:rgb(36, 85, 20);
+        font-size: large;
+        font-weight: 800;
+        margin:0.5em;
+    }
+
+
+
+
+
+
+
+
+}
